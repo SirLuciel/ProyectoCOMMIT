@@ -39,13 +39,13 @@
     
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
-       
+        
             <!-- Top Navbar -->
             <div class="navbar">
                 <div class="navbar-bg"></div>
                 <div class="navbar-inner">
                     <div class="left"><i class="icon icon-back"></i></div>
-                    <div class="title">Page Title</div>
+                    <div class="title">Jp dumm</div>
                     <div class="right"><i class="icon icon-forward"></i></div>
                 </div>
             </div>
@@ -60,41 +60,62 @@
             </div>
         
         <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="index" class="page">
+            <div data-name="index" class="page bkgrn">
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
                         
                         <!-- CONTENIDO DEMO -->
-                        
-                        <p>Page content goes here</p>
-                        <!-- Link to another page -->
-                        <a href="/about/">About app</a>
-
-                        <!-- In data-popup attribute we specify CSS selector of popup we need to open -->
-                        <p><a href="#" data-popup=".my-popup" class="popup-open">Open Popup</a></p>
-
-                        <!-- And somewhere in DOM -->
-                        <div class="popup my-popup">
-                            <div class="view">
-                                <div class="page">
-                                    <div class="navbar">
-                                        <div class="navbar-bg"></div>
-                                        <div class="navbar-inner">
-                                            <div class="title">Popup</div>
-                                            <div class="right">
-                                                <!-- Link to close popup -->
-                                                <a class="link popup-close">Close</a>
+                        <h2>Registro</h2>
+                        <div class="grid grid-cols-1 grid-gap">
+                            <div class="list list-strong-ios list-dividers-ios inset-ios">
+                                <ul class="">
+                                    <li class="item-content item-input item-input-with-info">
+                                        <div class="item-media">
+                                            <i class="icon demo-list-icon"></i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">E-mail</div>
+                                            <div class="item-input-wrap">
+                                                <input type="email" id="indexEmail" class="iptcolor" placeholder="Tu e-mail" required validate>
+                                                <span class="input-clear-button"></span>
+                                                <div class="item-input-info">Validación de e-mail</div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="page-content">
-                                      ...
-                                    </div>
-                                </div>
+                                    </li>
+                        
+                        
+                                    <li class="item-content item-input">
+                                        <div class="item-media">
+                                            <i class="icon demo-list-icon"></i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                                <input type="password" id="indexClave" placeholder="Tu clave">
+                                                <span class="input-clear-button"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                        
+                        
+                                </ul>
                             </div>
                         </div>
+
+                        <div class="grid grid-cols-1 grid-gap">
+                            <div><button id="btnRegistro" class="button button-fill">Registrarme</button></div>
+                        </div>
+
+                        <br><br><br>
                         
+                        <div class="grid grid-cols-1 grid-gap">
+                            <div><a href="/info/" class="button button-outline button-round button-raised">Quiero saber más...</a></div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 grid-gap">
+                            <div><a href="/login/" class="button button-outline button-round button-raised">Ya tengo usuario, quiero iniciar
+                                    sesión</a></div>
+                        </div>
                         <!-- FIN DE DEMO -->
                         
                         
@@ -106,6 +127,27 @@
         </div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <!--
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    -->
+
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCih68GbfAETIgYKrjwjX1hWPyL3iCIWkY",
+            authDomain: "app-comit--pabloc.firebaseapp.com",
+            projectId: "app-comit--pabloc",
+            storageBucket: "app-comit--pabloc.appspot.com",
+            messagingSenderId: "544173040004",
+            appId: "1:544173040004:web:7aee1d259c574bf0f07dd1"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>

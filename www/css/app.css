@@ -1,4 +1,10 @@
 /* Your app custom styles here */
+.bkgrn{
+  background-color: #F7B9B9;
+}
+.iptcolor{
+  background-color: #FED4D4;
+}
 /* poppins-regular - latin */
 @font-face {
   font-family: 'Poppins';
