@@ -20,6 +20,7 @@ var app = new Framework7({
       {path: '/registro/', url: 'registro.html',},
       {path: '/login/', url: 'login.html',},
       {path: '/confirmacion/', url: 'confirmacion.html'},
+      {path: '/menu/', url: 'menu.html'},
     ]
     // ... other parameters
   });
@@ -81,7 +82,7 @@ function fnIniciarSesion() {
 
             console.log("Bienvenid@!!! " + email);
 
-            mainView.router.navigate('/info/');
+            mainView.router.navigate('/menu/');
             // ...
           })
           .catch((error) => {
