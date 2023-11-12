@@ -22,6 +22,9 @@ var app = new Framework7({
       {path: '/confirmacion/', url: 'confirmacion.html'},
       {path: '/menu/', url: 'menu.html'},
       {path: '/lecciones/', url: 'lecciones.html'},
+      {path: '/leccion1/', url: 'leccion1.html'},
+      {path: '/leccion2/', url: 'leccion2.html'},
+      {path: '/leccion3/', url: 'leccion3.html'},
     ]
     // ... other parameters
   });
