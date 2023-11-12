@@ -21,6 +21,7 @@ var app = new Framework7({
       {path: '/login/', url: 'login.html',},
       {path: '/confirmacion/', url: 'confirmacion.html'},
       {path: '/menu/', url: 'menu.html'},
+      {path: '/lecciones/', url: 'lecciones.html'},
     ]
     // ... other parameters
   });
@@ -58,10 +59,11 @@ $$(document).on('page:init', '.page[data-name="login"]', function (e) {
 $$(document).on('page:init', '.page[data-name="confirmacion"]', function (e) {
     $$("#confNombre").text(nombre)
     $$("#confEmail").text(email)
-  })
+})
   $$(document).on('page:init', '.page[data-name="info"]', function (e) {
     
 })
+
 
 
 /* MIS FUNCIONES */
@@ -130,6 +132,8 @@ function fnRegistro() {
         //mainView.router.navigate("/registro/")
     }
 }
+
+
 
 function fnFinRegistro() {
     nombre = $$("#regNombre").val();
