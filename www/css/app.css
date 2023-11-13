@@ -1,6 +1,9 @@
 /* Your app custom styles here */
 .bkgrn{
-  background-color: #F7B9B9;
+  background-image: linear-gradient(to right, #d0586c 3%, #59161b 100%);
+}
+.bkgrn2{
+    background-color: #a84251;
 }
 .iptcolor{
   background-color: #FED4D4;
