@@ -32,6 +32,8 @@ var app = new Framework7({
 
 var mainView = app.views.create('.view-main');
 
+var db = firebase.firestore();
+var ColUsuarios = db.collection("USUARIOS");
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
@@ -144,6 +146,16 @@ function fnFinRegistro() {
     apellido = $$("#regApellido").val();
 
     if (nombre!="" && apellido!="") {
-        mainView.router.navigate("/confirmacion/")
+
+      datos = {nombre: nombre, apellido: apellido};
+      elID = email;
+
+      ColUsuarios.doc(elID).set(datos)
+      .then( function(docRef){
+        mainView.router.navigate("/confirmacion/");
+      })
+      .catch(function(error){
+        console.log("Error: "+ error);
+      })
     }
 }
